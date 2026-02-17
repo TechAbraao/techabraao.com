@@ -117,9 +117,14 @@ h2 {
     justify-content: space-between;
     align-items: center;
 }
+
 .title h3 {
-    font-size: 25px
+    font-size: 25px;
+    display: flex;
+    align-items: center;
+    gap: 7px
 }
+
 .title p {
     display: inline-block;
     background-color: #212830;
@@ -131,11 +136,13 @@ h2 {
     border-width: 2px;
     font-weight: 700;
 }
+
 .work-sep {
-    border: none;        
-    height: 2px;         
+    border: none;
+    height: 2px;
     background-color: #3D444D;
 }
+
 .description {
     padding-top: 17px;
     padding-bottom: 17px;
@@ -144,15 +151,58 @@ h2 {
     justify-content: center;
     align-items: center;
 }
+
 .topics {
     display: flex;
-    align-items: left ;
+    align-items: left;
     flex-direction: column;
 }
-.topics p {
+
+.topics > p {
     margin-left: 14px;
     font-size: 16px;
+    font-weight: 900 
 }
+.skills-repo {
+    display: inline-block;
+    background-color: #212830;
+    padding: 2px 12px;
+    border-radius: 20px;
+    margin: 5px;
+    font-size: 0.9rem;
+    border: solid;
+    border-color: #3D444D;
+    border-width: 2px;
+    font-weight: 700;
+}
+
+.work-icon-img {
+    border: solid;
+    border-width: 2px;
+    border-color: #3D444D;
+    padding-right: 10px;
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 20px;
+    width: 20px;
+    cursor: pointer;
+}
+.work-icon-img img {
+    width: 27px;
+    display: flex;
+    margin-left: 13px;
+    filter: brightness(0) saturate(100%) invert(23%) sepia(6%) saturate(396%) hue-rotate(174deg) brightness(93%) contrast(90%);
+}
+
+.skillsRepoSection {
+
+    height: 50px;
+    display: flex;
+    align-items: center;
+}
+
 .card-projects aside {
     display: flex;
     align-items: center;
@@ -164,6 +214,32 @@ h2 {
     align-items: center;
     justify-content: space-between;
 }
+
+.cards-experience aside h2 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.cards-experience aside h2 div {
+    border: solid;
+    border-width: 2px;
+    border-color: #3D444D;
+    padding-right: 10px;
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    width: 40px;
+    cursor: pointer;
+}
+
+.other-description {
+    font-weight: 200 !important;
+    font-size: 17px;
+}
+
 .cards-projects aside h2 div {
     border: solid;
     border-width: 2px;
@@ -177,24 +253,83 @@ h2 {
     width: 40px;
     cursor: pointer;
 }
-.cards-projects-dropdowm {
+
+.cards-dropdowm {
     display: flex;
     align-items: center;
     justify-content: center;
 }
-.cards-projects-dropdowm img {
+
+.dropdown-education {
+    border: solid;
+    border-width: 2px;
+    border-color: #3D444D;
+    padding-right: 10px;
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    width: 40px;
+    cursor: pointer;
+}
+
+.dropdown-education img {
+    height: 34px;
+    margin-left: 10.9px;
+    filter: brightness(0) saturate(100%) invert(23%) sepia(6%) saturate(396%) hue-rotate(174deg) brightness(93%) contrast(90%);
+
+}
+
+.education-module h2 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.cards-dropdowm img {
     height: 34px;
     margin-left: 10.9px;
     filter: brightness(0) saturate(100%) invert(23%) sepia(6%) saturate(396%) hue-rotate(174deg) brightness(93%) contrast(90%);
 }
 
 
-.language-circle {
-  width: 17px;
-  height: 17px;
-  background-color: red;  
-  border-radius: 100%;
-  margin-right: 7px
+.language-circle-python {
+    width: 17px;
+    height: 17px;
+    background-color: #3572A5;
+    border-radius: 100%;
+    margin-right: 7px
+}
+
+.language-circle-java {
+    width: 17px;
+    height: 17px;
+    background-color: #B07219;
+    border-radius: 100%;
+    margin-right: 7px
+}
+
+.language-circle-shell {
+    width: 17px;
+    height: 17px;
+    background-color: #89E051;
+    border-radius: 100%;
+    margin-right: 7px
+}
+
+.language-circle-kotlin {
+    width: 17px;
+    height: 17px;
+    background-color: #A97BFF;
+    border-radius: 100%;
+    margin-right: 7px
+}
+
+.language-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 ul {
