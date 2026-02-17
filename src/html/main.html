@@ -14,13 +14,13 @@
         <header>
             <h1>ABRAÃO V. S. SANTOS</h1>
             <p>
-                <a href="https://www.linkedin.com/in/abraaosvs/">LinkedIn</a> |
-                <a href="https://github.com/TechAbraao">GitHub</a> |
-                <a href="#">Youtube</a> |
+                <a href="https://www.linkedin.com/in/abraaosvs/">LinkedIn</a> •
+                <a href="https://github.com/TechAbraao">GitHub</a> •
+                <a href="#">Youtube</a> •
                 <a href="#">Articles</a>
             </p>
             <p>
-                Brazil, São Paulo - SP |
+                Brazil, São Paulo - SP •
                 abraaosantos.contato@hotmail.com 
             </p>
         </header>
@@ -52,7 +52,7 @@
             <div class="card experience">
                 <div>
                     <div class="title">
-                        <h3>Software Engineer Intern</h3>
+                        <h3>Software Engineering Intern</h3>
                         <p>fev de 2025 – Present</p>
                     </div>
                     <div class="description">
@@ -126,21 +126,36 @@
             </div>
         </section>
 
-        <section class="" id="cardsProjects">
-            <h2>PROJECTS</h2>
+        <section class="cards-projects">
+            <aside>
+                <h2>PROJECTS
+                    <div class="cards-projects-dropdowm">
+                        <img src="../static/icons/more.svg"/>
+                    </div>
+                </h2>
+            </aside>
+            <asidev id="cardsProjects">
+                <!--# THE PROJECTS WILL BE RENDERED HERE. #-->
+            </asidev>
         </section>
 
         <section>
             <h2>EDUCATION</h2>
 
             <div class="card">
-                <h3>Faculdade de Tecnologia da Zona Leste (FATEC-ZL)</h3>
-                <p>Tecnólogo | Desenvolvimento de Software Multiplataforma (jul de 2024 – jul de 2027)</p>
+                <div class="academic-title">
+                    <h3>Faculdade de Tecnologia da Zona Leste (FATEC-ZL)</h3>
+                    <span>jul de 2024 – jul de 2027</span>
+                </div>
+                <p class="academic-course">Tecnólogo | Desenvolvimento de Software Multiplataforma</p>
             </div>
 
             <div class="card">
-                <h3>SENAC Lapa Tito</h3>
-                <p>Course | Desenvolvimento Web e Java (fev de 2024 – jul de 2024)</p>
+                <div class="academic-title">
+                    <h3>SENAC Lapa Tito (Instituto PROA)</h3>
+                    <span>fev de 2024 – jul de 2024</span>
+                </div>
+                <p class="academic-course">Course | Desenvolvimento Web e Java</p>
             </div>
 
         </section>
@@ -150,7 +165,8 @@
         </footer>
     </div>
 </body>
-<script src="../libs/jquery.min.js"></script>
+<script src="../static/libs/jquery.min.js"></script>
 <script src="../js/github.services.js"></script>
+<script src="../js/drops.js"></script>
 
 </html>

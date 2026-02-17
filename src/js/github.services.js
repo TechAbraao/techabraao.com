@@ -31,6 +31,8 @@ $(document).ready(async function() {
     const res = await getRepos("TechAbraao"); 
     const cardsSection = $("#cardsProjects")
     
+    cardsSection.hide()
+
     res.forEach(repo => {
         let nameRepo = repo.name;
         let descriptionRepo = repo.description;
@@ -42,4 +44,5 @@ $(document).ready(async function() {
     })
 
     console.log(res)
+
 });
