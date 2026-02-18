@@ -1,6 +1,9 @@
+let allRepos = [];
+let currentPage = 1;
+const itemsPerPage = 3;
+
 async function getRepos(username) {
     try {
-
         const response = await $.ajax({
             method: "GET",
             url: `https://api.github.com/users/${username}/repos`
@@ -31,9 +34,7 @@ function capitalizeFirstLetter(text) {
     return text.charAt(0).toUpperCase() + text.slice(1);
 }
 
-
 function cardRepos(title, description, language, topics) {
-
     const languageClass = getLanguageClass(language);
 
     return `
@@ -47,30 +48,59 @@ function cardRepos(title, description, language, topics) {
                 </div>
             </aside>
             <div class="skillsRepoSection">
-                ${topics?.map(topic => `
+                ${(topics ?? []).map(topic => `
                     <span class="skills-repo">${topic}</span>
-                `).join("") ?? ""}
+                `).join("")}
             </div>
         </div>
-    `
+    `;
+}
+
+function renderPage() {
+    const cardsSection = $("#cardsProjects");
+    cardsSection.empty();
+
+    const start = (currentPage - 1) * itemsPerPage;
+    const end = start + itemsPerPage;
+
+    const paginatedRepos = allRepos.slice(start, end);
+
+    paginatedRepos.forEach(repo => {
+        const cardRepoHtml = cardRepos(
+            repo.name,
+            repo.description,
+            repo.language,
+            repo.topics
+        );
+
+        cardsSection.append(cardRepoHtml);
+    });
+
+    const totalPages = Math.ceil(allRepos.length / itemsPerPage);
+    $("#pageInfo").text(`Page ${currentPage} of ${totalPages}`);
+
+    $("#prevPage").prop("disabled", currentPage === 1);
+    $("#nextPage").prop("disabled", currentPage === totalPages);
 }
 
 $(document).ready(async function () {
-    const res = await getRepos("TechAbraao");
-    const cardsSection = $("#cardsProjects")
+    allRepos = await getRepos(CONFIG.GITHUB_USERNAME);
 
-    res.forEach(repo => {
-    const cardRepoHtml = cardRepos(
-        repo.name,
-        repo.description,
-        repo.language,
-        repo.topics
-    );
+    renderPage();
 
-    cardsSection.append(cardRepoHtml);
-});
+    $("#nextPage").click(function () {
+        const totalPages = Math.ceil(allRepos.length / itemsPerPage);
+        if (currentPage < totalPages) {
+            currentPage++;
+            renderPage();
+        }
+    });
 
-
-    console.log(res)
+    $("#prevPage").click(function () {
+        if (currentPage > 1) {
+            currentPage--;
+            renderPage();
+        }
+    });
 
 });
