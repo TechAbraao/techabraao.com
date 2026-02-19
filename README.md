@@ -5,7 +5,7 @@
 - Additionally, if you would like to contribute to this project, feel free to open an issue or submit a pull request.
 
 
-### Live Preview
+### Live Preview (soon)
 ```bash
 https://techabraao.com
 ```
