@@ -408,6 +408,14 @@ h2 {
     border-radius: 100%;
     margin-right: 7px
 }
+.language-circle-html {
+    width: 17px;
+    height: 17px;
+    background-color: #FF1127;
+    border-radius: 100%;
+    margin-right: 7px
+}
+
 
 .language-wrapper {
     display: flex;

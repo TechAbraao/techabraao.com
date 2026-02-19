@@ -24,6 +24,8 @@ function getLanguageClass(language) {
             return "language-circle-shell";
         case "Kotlin":
             return "language-circle-kotlin";
+        case "HTML":
+            return "language-circle-html"
         default:
             return "";
     }

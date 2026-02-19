@@ -1,6 +1,6 @@
 # My personal Website
 
-- Official portfolio of __Abraão V. S. Santos (Techabraao).__ 
+- Official portfolio of __Abraão Santos (Techabraao).__ 
 - This project is open-source, meaning you are free to clone the repository and customize it to your liking.
 - Additionally, if you would like to contribute to this project, feel free to open an issue or submit a pull request.
 
