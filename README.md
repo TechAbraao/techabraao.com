@@ -45,3 +45,17 @@ Or, for a better development experience, you can use a local server:
 - Right-click on ```main.html```
 - Click Open with Live Server
 - The project should now be running locally!
+
+#### 5. Creating a Docker image
+If you want to create a Docker image to use in a container, do the following:
+```bash
+docker build -f dockerfiles/Dockerfile -t techabraao.com .
+```
+Then initialize the container:
+```bash
+docker run -p <port>:80 techabraao.com
+```
+It will now be available at:
+```bash
+http://localhost:<port>
+```
