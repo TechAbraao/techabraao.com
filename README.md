@@ -42,11 +42,12 @@ Since this is a static website, you can simply open the main.html file in your b
 Or, for a better development experience, you can use a local server:
 #### Using VSCODE Live Server
 - Install the Live Server extension
-- Right-click on ```main.html```
+- Right-click on ```index.html```
 - Click Open with Live Server
 - The project should now be running locally!
 
-#### 5. Creating a Docker image
+### Using Docker 
+#### 1. Creating a Docker image
 If you want to create a Docker image to use in a container, do the following:
 ```bash
 docker build -f dockerfiles/Dockerfile -t techabraao.com .
