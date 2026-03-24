@@ -64,5 +64,5 @@ http://localhost:<port>
 #### 2. Pulling the image from Docker Hub
 To get the image from Docker Hub, you will also need to specify the project version:
 ```bash
-docker run -p 8000:80 techabraao/techabraao.com:v1.0.0 -d
+docker run -d -p 8000:80 techabraao/techabraao.com:latest
 ```
