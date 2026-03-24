@@ -9,13 +9,13 @@ jobs:
       - setup_remote_docker
       - run:
           name: Build Docker Image
-          command: docker build -f dockerfiles/Dockerfile -t $DOCKERHUB_USERNAME/techabraao:v1.0.0 .
+          command: docker build -f dockerfiles/Dockerfile -t $DOCKERHUB_USERNAME/techabraao.com:latest .
       - run:
           name: DockerHub Login
           command: echo $DOCKERHUB_PASSWORD | docker login -u $DOCKERHUB_USERNAME --password-stdin
       - run:
           name: Push to DockerHub
-          command: docker push $DOCKERHUB_USERNAME/techabraao:v1.0.0
+          command: docker push $DOCKERHUB_USERNAME/techabraao.com
 
 workflows:
   pipeline:
