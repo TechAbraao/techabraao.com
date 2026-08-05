@@ -1,8 +1,6 @@
 # My personal Website
 
-- Official portfolio website __Abraão Santos (Techabraao).__ 
-- This project is open-source, meaning you are free to clone the repository and customize it to your liking.
-- Additionally, if you would like to contribute to this project, feel free to open an issue or submit a pull request.
+- Portfólio descritivo oficial do __Abraão Santos (Techabraao).__ 
 
 
 ### Live Preview (soon)
@@ -28,7 +26,7 @@ Before running the project, configure your GitHub username to fetch your reposit
 
 Edit the file:
 ```bash
-./src/js/configs.js
+./docs/js/configs.js
 ```
 And update:
 ```javascript

@@ -289,7 +289,27 @@ h2 {
     cursor: pointer;
 }
 
+.dropdown-certifications {
+    border: solid;
+    border-width: 2px;
+    border-color: #3D444D;
+    padding-right: 10px;
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    width: 40px;
+    cursor: pointer;
+}
+
 .technologies-title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.certifications-title {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -299,7 +319,12 @@ h2 {
     height: 34px;
     margin-left: 10.9px;
     filter: brightness(0) saturate(100%) invert(23%) sepia(6%) saturate(396%) hue-rotate(174deg) brightness(93%) contrast(90%);
+}
 
+.dropdown-certifications img {
+    height: 34px;
+    margin-left: 10.9px;
+    filter: brightness(0) saturate(100%) invert(23%) sepia(6%) saturate(396%) hue-rotate(174deg) brightness(93%) contrast(90%);
 }
 
 .dropdown-education img {
