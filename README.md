@@ -1,66 +1,66 @@
-# My personal Website
+# Meu Site Pessoal (portfólio)
 
 - Portfólio descritivo oficial do __Abraão Santos (Techabraao).__ 
 
 
-### Live Preview (soon)
+### Prévia ao Vivo (em breve)
 ```bash
 https://techabraao.com
 ```
 
-### Getting started
-Follow the steps below to clone and run this project locally.
+### Começando
+Siga os passos abaixo para clonar e executar este projeto localmente.
 
-#### 1. Clone the repository
+#### 1. Clone o repositório
 ```bash
 git clone git@github.com:TechAbraao/techabraao.com.git
 ```
 
-#### 2. Navigate to the project folder
+#### 2. Navegue até a pasta do projeto
 ```bash
 cd techabraao.com
 ```
 
-#### 3. Configure GitHub username
-Before running the project, configure your GitHub username to fetch your repositories.
+#### 3. Configure o nome de usuário do GitHub
+Antes de rodar o projeto, configure seu nome de usuário do GitHub para buscar seus repositórios.
 
-Edit the file:
+Edite o arquivo:
 ```bash
 ./docs/js/configs.js
 ```
-And update:
+E atualize:
 ```javascript
 const CONFIG = {
-    GITHUB_USERNAME: 'your_username'
+    GITHUB_USERNAME: 'seu_usuario'
 }
 ```
 
-#### 4. Open the project
-Since this is a static website, you can simply open the `index.html` file in your browser.
-Or, for a better development experience, you can use a local server:
-#### Using VSCODE Live Server
-- Install the Live Server extension
-- Right-click on ```index.html```
-- Click Open with Live Server
-- The project should now be running locally!
+#### 4. Abra o projeto
+Como este é um site estático, você pode simplesmente abrir o arquivo `index.html` no seu navegador.
+Ou, para uma melhor experiência de desenvolvimento, você pode usar um servidor local:
+#### Usando o Live Server do VSCODE
+- Instale a extensão Live Server
+- Clique com o botão direito em ```index.html```
+- Clique em Open with Live Server
+- O projeto agora deverá estar rodando localmente!
 
-### Using Docker 
-#### 1. Building the Docker image
-If you want to create a Docker image to use in a container, do the following:
+### Usando Docker 
+#### 1. Construindo a imagem Docker
+Se você quiser criar uma imagem Docker para usar em um container, faça o seguinte:
 ```bash
 docker build -f dockerfiles/Dockerfile -t techabraao.com .
 ```
-Then initialize the container:
+Depois, inicie o container:
 ```bash
-docker run -p <port>:80 techabraao.com
+docker run -p <porta>:80 techabraao.com
 ```
-It will now be available at:
+Ele agora estará disponível em:
 ```bash
-http://localhost:<port>
+http://localhost:<porta>
 ```
 
-#### 2. Pulling the image from Docker Hub
-To get the image from Docker Hub, you will also need to specify the project version:
+#### 2. Baixando a imagem do Docker Hub
+Para obter a imagem do Docker Hub, você também precisará especificar a versão do projeto:
 ```bash
 docker run -d -p 8000:80 techabraao/techabraao.com:latest
 ```

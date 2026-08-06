@@ -27,7 +27,7 @@ function getLanguageClass(language) {
         case "HTML":
             return "language-circle-html"
         default:
-            return "";
+            return "language-default";
     }
 }
 
@@ -36,12 +36,17 @@ function capitalizeFirstLetter(text) {
     return text.charAt(0).toUpperCase() + text.slice(1);
 }
 
-function cardRepos(title, description, language, topics) {
+function cardRepos(title, description, language, topics, url) {
     const languageClass = getLanguageClass(language);
 
     return `
         <div class="card-projects">
-            <h3>${title}</h3>
+            <section class="card-infos">
+                <h3>${title}</h3>
+                <span>
+                    <a href="${url}" target="_blank">Repositório</a>
+                </span>
+            </section>
             <p>${description ?? "N/A"}</p>
             <aside>
                 <div class="language-wrapper">
@@ -66,13 +71,15 @@ function renderPage() {
     const end = start + itemsPerPage;
 
     const paginatedRepos = allRepos.slice(start, end);
+    console.log(paginatedRepos)
 
     paginatedRepos.forEach(repo => {
         const cardRepoHtml = cardRepos(
             repo.name,
             repo.description,
             repo.language,
-            repo.topics
+            repo.topics,
+            repo.svn_url
         );
 
         cardsSection.append(cardRepoHtml);

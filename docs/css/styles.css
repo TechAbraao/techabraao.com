@@ -49,9 +49,6 @@ header p {
     border-width: 2px;
 }
 
-section {
-    margin-bottom: 40px;
-}
 
 h2 {
     margin-bottom: 15px;
@@ -84,6 +81,28 @@ h2 {
     border: solid;
     border-color: #3D444D;
     border-width: 2px;
+}
+.card-infos {
+    display: flex;
+    justify-content: space-between
+}
+
+.card-infos > span {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: #21283089;
+    padding: 2px 12px;
+    border-radius: 20px;
+    font-size: 14px;
+    border: 2px solid #333942;
+    font-weight: 700;
+}
+
+.card-infos > span > a {
+    all: unset;
+    cursor: pointer;
 }
 
 .card-projects h3 {
@@ -275,6 +294,20 @@ h2 {
     cursor: pointer;
 }
 
+.dropdown-projects {
+    border: solid;
+    border-width: 2px;
+    border-color: #3D444D;
+    padding-right: 10px;
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    width: 40px;
+    cursor: pointer;
+}
+
 .dropdown-technologies {
     border: solid;
     border-width: 2px;
@@ -316,6 +349,12 @@ h2 {
 }
 
 .dropdown-technologies img {
+    height: 34px;
+    margin-left: 10.9px;
+    filter: brightness(0) saturate(100%) invert(23%) sepia(6%) saturate(396%) hue-rotate(174deg) brightness(93%) contrast(90%);
+}
+
+.dropdown-projects img {
     height: 34px;
     margin-left: 10.9px;
     filter: brightness(0) saturate(100%) invert(23%) sepia(6%) saturate(396%) hue-rotate(174deg) brightness(93%) contrast(90%);
@@ -441,6 +480,13 @@ h2 {
     margin-right: 7px
 }
 
+.language-default {
+    width: 17px;
+    height: 17px;
+    background-color: #fe587e;
+    border-radius: 100%;
+    margin-right: 7px
+}
 
 .language-wrapper {
     display: flex;
